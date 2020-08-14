@@ -1,0 +1,585 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		629B745524E726A30053AF49 /* MealswipeApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 629B745424E726A30053AF49 /* MealswipeApp.swift */; };
+		629B745724E726A30053AF49 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 629B745624E726A30053AF49 /* ContentView.swift */; };
+		629B745924E726A60053AF49 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 629B745824E726A60053AF49 /* Assets.xcassets */; };
+		629B745C24E726A60053AF49 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 629B745B24E726A60053AF49 /* Preview Assets.xcassets */; };
+		629B746724E726A60053AF49 /* MealswipeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 629B746624E726A60053AF49 /* MealswipeTests.swift */; };
+		629B747224E726A60053AF49 /* MealswipeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 629B747124E726A60053AF49 /* MealswipeUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		629B746324E726A60053AF49 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 629B744924E726A30053AF49 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 629B745024E726A30053AF49;
+			remoteInfo = Mealswipe;
+		};
+		629B746E24E726A60053AF49 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 629B744924E726A30053AF49 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 629B745024E726A30053AF49;
+			remoteInfo = Mealswipe;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		629B745124E726A30053AF49 /* Mealswipe.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Mealswipe.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		629B745424E726A30053AF49 /* MealswipeApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealswipeApp.swift; sourceTree = "<group>"; };
+		629B745624E726A30053AF49 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		629B745824E726A60053AF49 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		629B745B24E726A60053AF49 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		629B745D24E726A60053AF49 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		629B746224E726A60053AF49 /* MealswipeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MealswipeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		629B746624E726A60053AF49 /* MealswipeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealswipeTests.swift; sourceTree = "<group>"; };
+		629B746824E726A60053AF49 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		629B746D24E726A60053AF49 /* MealswipeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MealswipeUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		629B747124E726A60053AF49 /* MealswipeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealswipeUITests.swift; sourceTree = "<group>"; };
+		629B747324E726A60053AF49 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		629B744E24E726A30053AF49 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		629B745F24E726A60053AF49 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		629B746A24E726A60053AF49 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		629B744824E726A30053AF49 = {
+			isa = PBXGroup;
+			children = (
+				629B745324E726A30053AF49 /* Mealswipe */,
+				629B746524E726A60053AF49 /* MealswipeTests */,
+				629B747024E726A60053AF49 /* MealswipeUITests */,
+				629B745224E726A30053AF49 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		629B745224E726A30053AF49 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				629B745124E726A30053AF49 /* Mealswipe.app */,
+				629B746224E726A60053AF49 /* MealswipeTests.xctest */,
+				629B746D24E726A60053AF49 /* MealswipeUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		629B745324E726A30053AF49 /* Mealswipe */ = {
+			isa = PBXGroup;
+			children = (
+				629B745424E726A30053AF49 /* MealswipeApp.swift */,
+				629B745624E726A30053AF49 /* ContentView.swift */,
+				629B745824E726A60053AF49 /* Assets.xcassets */,
+				629B745D24E726A60053AF49 /* Info.plist */,
+				629B745A24E726A60053AF49 /* Preview Content */,
+			);
+			path = Mealswipe;
+			sourceTree = "<group>";
+		};
+		629B745A24E726A60053AF49 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				629B745B24E726A60053AF49 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		629B746524E726A60053AF49 /* MealswipeTests */ = {
+			isa = PBXGroup;
+			children = (
+				629B746624E726A60053AF49 /* MealswipeTests.swift */,
+				629B746824E726A60053AF49 /* Info.plist */,
+			);
+			path = MealswipeTests;
+			sourceTree = "<group>";
+		};
+		629B747024E726A60053AF49 /* MealswipeUITests */ = {
+			isa = PBXGroup;
+			children = (
+				629B747124E726A60053AF49 /* MealswipeUITests.swift */,
+				629B747324E726A60053AF49 /* Info.plist */,
+			);
+			path = MealswipeUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		629B745024E726A30053AF49 /* Mealswipe */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 629B747624E726A60053AF49 /* Build configuration list for PBXNativeTarget "Mealswipe" */;
+			buildPhases = (
+				629B744D24E726A30053AF49 /* Sources */,
+				629B744E24E726A30053AF49 /* Frameworks */,
+				629B744F24E726A30053AF49 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Mealswipe;
+			productName = Mealswipe;
+			productReference = 629B745124E726A30053AF49 /* Mealswipe.app */;
+			productType = "com.apple.product-type.application";
+		};
+		629B746124E726A60053AF49 /* MealswipeTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 629B747924E726A60053AF49 /* Build configuration list for PBXNativeTarget "MealswipeTests" */;
+			buildPhases = (
+				629B745E24E726A60053AF49 /* Sources */,
+				629B745F24E726A60053AF49 /* Frameworks */,
+				629B746024E726A60053AF49 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				629B746424E726A60053AF49 /* PBXTargetDependency */,
+			);
+			name = MealswipeTests;
+			productName = MealswipeTests;
+			productReference = 629B746224E726A60053AF49 /* MealswipeTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		629B746C24E726A60053AF49 /* MealswipeUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 629B747C24E726A60053AF49 /* Build configuration list for PBXNativeTarget "MealswipeUITests" */;
+			buildPhases = (
+				629B746924E726A60053AF49 /* Sources */,
+				629B746A24E726A60053AF49 /* Frameworks */,
+				629B746B24E726A60053AF49 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				629B746F24E726A60053AF49 /* PBXTargetDependency */,
+			);
+			name = MealswipeUITests;
+			productName = MealswipeUITests;
+			productReference = 629B746D24E726A60053AF49 /* MealswipeUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		629B744924E726A30053AF49 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1200;
+				LastUpgradeCheck = 1200;
+				TargetAttributes = {
+					629B745024E726A30053AF49 = {
+						CreatedOnToolsVersion = 12.0;
+					};
+					629B746124E726A60053AF49 = {
+						CreatedOnToolsVersion = 12.0;
+						TestTargetID = 629B745024E726A30053AF49;
+					};
+					629B746C24E726A60053AF49 = {
+						CreatedOnToolsVersion = 12.0;
+						TestTargetID = 629B745024E726A30053AF49;
+					};
+				};
+			};
+			buildConfigurationList = 629B744C24E726A30053AF49 /* Build configuration list for PBXProject "Mealswipe" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 629B744824E726A30053AF49;
+			productRefGroup = 629B745224E726A30053AF49 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				629B745024E726A30053AF49 /* Mealswipe */,
+				629B746124E726A60053AF49 /* MealswipeTests */,
+				629B746C24E726A60053AF49 /* MealswipeUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		629B744F24E726A30053AF49 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				629B745C24E726A60053AF49 /* Preview Assets.xcassets in Resources */,
+				629B745924E726A60053AF49 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		629B746024E726A60053AF49 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		629B746B24E726A60053AF49 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		629B744D24E726A30053AF49 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				629B745724E726A30053AF49 /* ContentView.swift in Sources */,
+				629B745524E726A30053AF49 /* MealswipeApp.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		629B745E24E726A60053AF49 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				629B746724E726A60053AF49 /* MealswipeTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		629B746924E726A60053AF49 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				629B747224E726A60053AF49 /* MealswipeUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		629B746424E726A60053AF49 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 629B745024E726A30053AF49 /* Mealswipe */;
+			targetProxy = 629B746324E726A60053AF49 /* PBXContainerItemProxy */;
+		};
+		629B746F24E726A60053AF49 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 629B745024E726A30053AF49 /* Mealswipe */;
+			targetProxy = 629B746E24E726A60053AF49 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		629B747424E726A60053AF49 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		629B747524E726A60053AF49 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		629B747724E726A60053AF49 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_ASSET_PATHS = "\"Mealswipe/Preview Content\"";
+				DEVELOPMENT_TEAM = QCBN94J645;
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = Mealswipe/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = io.mealswipesoftware.Mealswipe;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		629B747824E726A60053AF49 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_ASSET_PATHS = "\"Mealswipe/Preview Content\"";
+				DEVELOPMENT_TEAM = QCBN94J645;
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = Mealswipe/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = io.mealswipesoftware.Mealswipe;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		629B747A24E726A60053AF49 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = QCBN94J645;
+				INFOPLIST_FILE = MealswipeTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = io.mealswipesoftware.MealswipeTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Mealswipe.app/Mealswipe";
+			};
+			name = Debug;
+		};
+		629B747B24E726A60053AF49 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = QCBN94J645;
+				INFOPLIST_FILE = MealswipeTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = io.mealswipesoftware.MealswipeTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Mealswipe.app/Mealswipe";
+			};
+			name = Release;
+		};
+		629B747D24E726A60053AF49 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = QCBN94J645;
+				INFOPLIST_FILE = MealswipeUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = io.mealswipesoftware.MealswipeUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Mealswipe;
+			};
+			name = Debug;
+		};
+		629B747E24E726A60053AF49 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = QCBN94J645;
+				INFOPLIST_FILE = MealswipeUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = io.mealswipesoftware.MealswipeUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Mealswipe;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		629B744C24E726A30053AF49 /* Build configuration list for PBXProject "Mealswipe" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				629B747424E726A60053AF49 /* Debug */,
+				629B747524E726A60053AF49 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		629B747624E726A60053AF49 /* Build configuration list for PBXNativeTarget "Mealswipe" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				629B747724E726A60053AF49 /* Debug */,
+				629B747824E726A60053AF49 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		629B747924E726A60053AF49 /* Build configuration list for PBXNativeTarget "MealswipeTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				629B747A24E726A60053AF49 /* Debug */,
+				629B747B24E726A60053AF49 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		629B747C24E726A60053AF49 /* Build configuration list for PBXNativeTarget "MealswipeUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				629B747D24E726A60053AF49 /* Debug */,
+				629B747E24E726A60053AF49 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 629B744924E726A30053AF49 /* Project object */;
+}
