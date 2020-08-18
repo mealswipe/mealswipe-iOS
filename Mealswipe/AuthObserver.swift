@@ -39,13 +39,13 @@ class AuthObserver: ObservableObject {
                 print("Display name set to \(String(describing: request?.displayName))")
             })
             
-            let dictionary = [
+            let dictionary: [String: Any] = [
                 "displayName": displayName,
                 "email": email,
                 "hasSubscription": false,
                 "name": name,
                 "uid": Auth.auth().currentUser?.uid ?? ""
-            ] as [String : Any]
+            ]
             
             Firestore.firestore().collection("users").addDocument(data: dictionary) { (error) in
                 if let err = error {
