@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>619818311397-k4bel7838ms1p2eshb5rllbl3c1rq49j.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.619818311397-k4bel7838ms1p2eshb5rllbl3c1rq49j</string>
+	<key>API_KEY</key>
+	<string>AIzaSyD9rOs0l3ZjBKwAUqKWD4gA5H4OE_rr2eA</string>
+	<key>GCM_SENDER_ID</key>
+	<string>619818311397</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>io.mealswipesoftware.Mealswipe</string>
+	<key>PROJECT_ID</key>
+	<string>mealswipe-app</string>
+	<key>STORAGE_BUCKET</key>
+	<string>mealswipe-app.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:619818311397:ios:ca52cfa464628e8ab23e0c</string>
+	<key>DATABASE_URL</key>
+	<string>https://mealswipe-app.firebaseio.com</string>
+</dict>
+</plist>
