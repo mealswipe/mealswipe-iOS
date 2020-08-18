@@ -17,31 +17,43 @@ class AuthObserver: ObservableObject {
     }
     
     func registerAccount() {
-        let displayName = "brockm98"
-        let username = "Brock May"
-        let password = "password"
-        let email = "brockcm98@gmail.com"
+        let displayName = "WHATEVER USERNAME YOU WANT"
+        let name = "YOUR ACTUAL NAME"
+        let password = "PASSWORD HERE"
+        let email = "YOUR EMAIL HERE"
         
-        if !checkIfUserIsLoggedIn() {
-            Auth.auth().createUser(withEmail: email, password: password) { (result, error) in
+        Auth.auth().createUser(withEmail: email, password: password) { (result, error) in
+            if let err = error {
+                print(err.localizedDescription)
+                return
+            }
+            
+            let request = Auth.auth().currentUser?.createProfileChangeRequest()
+            request?.displayName = displayName
+            request?.commitChanges(completion: { (error) in
                 if let err = error {
                     print(err.localizedDescription)
                     return
                 }
                 
-                let request = Auth.auth().currentUser?.createProfileChangeRequest()
-                request?.displayName = displayName
-                request?.commitChanges(completion: { (error) in
-                    if let err = error {
-                        print(err.localizedDescription)
-                        return
-                    }
-                    
-                    print("Display name set to \(String(describing: request?.displayName))")
-                })
-            }
+                print("Display name set to \(String(describing: request?.displayName))")
+            })
             
-            print(Auth.auth().currentUser?.uid)
+            let dictionary = [
+                "displayName": displayName,
+                "email": email,
+                "hasSubscription": false,
+                "name": name,
+                "uid": Auth.auth().currentUser?.uid ?? ""
+            ] as [String : Any]
+            
+            Firestore.firestore().collection("users").addDocument(data: dictionary) { (error) in
+                if let err = error {
+                    print(err.localizedDescription)
+                }
+                
+                print("User data successfully saved to firestore")
+            }
         }
     }
 }
