@@ -21,33 +21,7 @@ struct MealCardView: View {
                 .resizable()
                 .cornerRadius(isExpanded ? 0 : 20)
                 .overlay(
-                    ZStack {
-                        
-                        if (isExpanded || abs(self.offset.width) > 0) {
-                            Rectangle()
-                                .foregroundColor(.black)
-                                .opacity(0.8)
-                                .cornerRadius(self.isExpanded ? 0 : 20)
-                        }
-                        
-                        if (!isExpanded && abs(self.offset.width) == 0) {
-                            LinearGradient(gradient: .init(colors: [.clear, .black]), startPoint: .top, endPoint: .bottom)
-                                .opacity(1)
-                                .cornerRadius(self.isExpanded ? 0 : 20)
-                        }
-
-                        Text("YUCK!")
-                            .font(.title)
-                            .foregroundColor(.red)
-                            .fontWeight(.bold)
-                            .opacity(offset.width < 0 ? 1 : 0)
-                        
-                        Text("YUM!")
-                            .font(.title)
-                            .foregroundColor(.green)
-                            .fontWeight(.bold)
-                            .opacity(offset.width > 0 ? 1 : 0)
-                    }
+                    MealCardOverlayView(offset: $offset, isExpanded: $isExpanded)
                 )
             
             VStack {
@@ -58,36 +32,12 @@ struct MealCardView: View {
                             .foregroundColor(.white)
                             .fontWeight(.bold)
                             .font(/*@START_MENU_TOKEN@*/.title/*@END_MENU_TOKEN@*/)
-                        Text("\(minutesToHours(minutes: meal.minutes))")
+                        Text("\(meal.minutesToHours())")
                             .foregroundColor(.white)
                             .font(.headline)
-                        
+                                                
                         if isExpanded {
-                            ScrollView {
-                                HStack {
-                                    VStack(alignment: .leading, spacing: 8, content: {
-                                        Text("Here's What You'll Need")
-                                            .foregroundColor(.white)
-                                            .fontWeight(.bold)
-                                            .font(/*@START_MENU_TOKEN@*/.title/*@END_MENU_TOKEN@*/)
-                                        
-                                        ForEach(self.meal.ingredients, id: \.self) { (element) in
-                                            Text("\(element.amount) \(element.name)")
-                                                .foregroundColor(.white)
-                                                .fontWeight(.thin)
-                                        }
-                                        
-                                        Text("Here's How to Make It")
-                                            .foregroundColor(.white)
-                                            .fontWeight(.bold)
-                                            .font(/*@START_MENU_TOKEN@*/.title/*@END_MENU_TOKEN@*/)
-                                        
-                                        Text(meal.instructions)
-                                            .fontWeight(.thin)
-                                    })
-                                    Spacer()
-                                }
-                            }.padding([.top], /*@START_MENU_TOKEN@*/10/*@END_MENU_TOKEN@*/)
+                            MealCardRecipeView(meal: meal)
                         }
                     })
                     
@@ -126,21 +76,12 @@ struct MealCardView: View {
         )
         
         .onTapGesture {
-            withAnimation(.spring(response: 0.5, dampingFraction: 1, blendDuration: 0.5)) {
+            withAnimation(.spring(response: 0.25, dampingFraction: 1, blendDuration: 0.25)) {
                 self.offset = CGSize.zero
                 self.isExpanded.toggle()
             }
         }
         
-    }
-    
-    func minutesToHours(minutes: Int) -> String {
-        if minutes > 60 {
-            let numHours = minutes/60
-            return "About \(numHours) hour\(numHours > 1 ? "s" : "")"
-        } else {
-            return "\(minutes) minute\(minutes > 1 ? "s" : "")"
-        }
     }
 }
 

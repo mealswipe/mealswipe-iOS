@@ -41,6 +41,17 @@ class Meal: Identifiable {
             })
         }
     }
+    
+    func minutesToHours() -> String {
+        if self.minutes >= 60 {
+            let (hours, calculatedMinutes) = minutes.quotientAndRemainder(dividingBy: 60)
+            let hoursString = "\(hours) hour\(hours > 1 ? "s" : "")"
+            let minutesString = calculatedMinutes > 0 ? " \(calculatedMinutes) minute\(calculatedMinutes > 1 ? "s" : "")" : ""
+            return hoursString + minutesString
+        } else {
+            return "\(minutes) minute\(minutes > 1 ? "s" : "")"
+        }
+    }
 }
 
 
