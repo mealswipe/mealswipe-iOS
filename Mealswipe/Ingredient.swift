@@ -9,7 +9,7 @@
 import Foundation
 import UIKit
 
-struct Ingredient {
+struct Ingredient: Hashable {
     var name: String
     var amount: String
     

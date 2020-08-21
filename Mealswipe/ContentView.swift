@@ -9,6 +9,7 @@ import SwiftUI
 
 struct ContentView: View {
     @ObservedObject var firebase = FirebaseObserver()
+    @State var numCards: Int = 0
     
     init() {
         UINavigationBar.appearance().setBackgroundImage(UIImage(), for: .default)
@@ -23,6 +24,7 @@ struct ContentView: View {
         UINavigationBar.appearance().titleTextAttributes = textAttributes
         
         firebase.fetchSwipes()
+        numCards = firebase.numCards
     }
     
     var body: some View {
@@ -30,9 +32,14 @@ struct ContentView: View {
             
             VStack {
                 ZStack {
-                    Text(firebase.loadingMessage)
-                        .fontWeight(.thin)
-                        .font(.title)
+                    
+                    if firebase.isLoading {
+                        Loader()
+                    } else {
+                        Text(firebase.loadingMessage)
+                            .fontWeight(.thin)
+                            .font(.title)
+                    }
                     
                     ForEach(self.firebase.meals) { (meal) -> MealCardView in
                         MealCardView(meal: meal)
@@ -49,4 +56,16 @@ struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         ContentView()
     }
+}
+
+struct Loader : UIViewRepresentable {
+    
+    func makeUIView(context: UIViewRepresentableContext<Loader>) -> UIActivityIndicatorView {
+        
+        let indicator = UIActivityIndicatorView(style: .large)
+        indicator.startAnimating()
+        return indicator
+    }
+    
+    func updateUIView(_ uiView: UIActivityIndicatorView, context: UIViewRepresentableContext<Loader>) {}
 }

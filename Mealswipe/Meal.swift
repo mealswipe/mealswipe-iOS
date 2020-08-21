@@ -8,19 +8,38 @@
 
 import Foundation
 import UIKit
+import FirebaseFirestore
 
-struct Meal: Identifiable {
+class Meal: Identifiable {
     var id: String
     var name: String
     var minutes: Int
     var imageUrl: String
-//    var ingredients: [Ingredient] // List of ingredients to go into recipe
+    var ingredients: [Ingredient] // List of ingredients to go into recipe
+    var instructions: String
     
     init(dictionary: [String:Any]) {
         self.id = dictionary["mealID"] as? String ?? ""
         self.name = dictionary["name"] as? String ?? ""
         self.minutes = dictionary["minutes"] as? Int ?? 0
         self.imageUrl = dictionary["imageUrl"] as? String ?? ""
+        self.ingredients = [Ingredient]()
+        self.instructions = dictionary["instructions"] as? String ?? ""
+    }
+    
+    func fetchIngredients() {
+        Firestore.firestore().collection("ingredients").document(self.id).collection("ingredients").getDocuments { (snapshot, error) in
+            if let err = error {
+                print(err.localizedDescription)
+                return
+            }
+            
+            snapshot?.documents.forEach({ (snap) in
+                let dictionary = snap.data()
+                let ingredient = Ingredient(dictionary: dictionary)
+                self.ingredients.append(ingredient)
+            })
+        }
     }
 }
 
