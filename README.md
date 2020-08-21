@@ -6,7 +6,7 @@ Apple ID to add into Xcode to be able to use Mealswipe on iOS Device: mealswipes
 To register yourself into Firebase, open AuthObserver.swift and go to the registerUser() function. There, you will be able to set a displayName, name, email and password to use to login.
 
 ## iOS Development Timeline </br>
-Date notes when all features in that section should be implemented by
+Date notes when all features in that section should be implemented. Features should be implemented by 12:00 AM Mountain of that day.
 
 - Pre-Alpha 1 (08/21/2020)
   1. [x] SWIPING FUNCTIONALITY 
