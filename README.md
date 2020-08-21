@@ -1,5 +1,7 @@
 # Mealswipe iOS
-iOS Version of the Mealswipe App
+iOS Version of the Mealswipe App </br>
+
+Apple ID to add into Xcode to be able to use Mealswipe on iOS Device: mealswipesoftware@gmail.com. Text Brock to get password.
 
 ## iOS Development Timeline </br>
 Date notes when all features in that section should be implemented by
