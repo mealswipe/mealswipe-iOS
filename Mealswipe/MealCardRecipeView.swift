@@ -13,6 +13,7 @@ struct MealCardRecipeView: View {
     var body: some View {
         ScrollView {
             HStack {
+                
                 VStack(alignment: .leading, spacing: 8, content: {
                     Text("Here's What You'll Need")
                         .foregroundColor(.white)

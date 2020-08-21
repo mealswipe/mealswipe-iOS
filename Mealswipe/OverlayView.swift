@@ -12,6 +12,7 @@ struct MealCardOverlayView: View {
     @Binding var offset: CGSize
     @Binding var isExpanded: Bool
     
+    
     var body: some View {
         ZStack {
             
