@@ -9,14 +9,13 @@ import SwiftUI
 
 struct ContentView: View {
     @ObservedObject var firebase = FirebaseObserver()
-    @State var numCards: Int = 0
     
     init() {
         UINavigationBar.appearance().setBackgroundImage(UIImage(), for: .default)
         UINavigationBar.appearance().shadowImage = UIImage()
         UINavigationBar.appearance().isTranslucent = true
         
-        // Make title text bold and set it to the Foodi Red
+        // Make title text have a thin font weight
         let textAttributes = [
             NSAttributedString.Key.font: UIFont.systemFont(ofSize: 20, weight: .thin)
         ]
@@ -24,7 +23,6 @@ struct ContentView: View {
         UINavigationBar.appearance().titleTextAttributes = textAttributes
         
         firebase.fetchSwipes()
-        numCards = firebase.numCards
     }
     
     var body: some View {

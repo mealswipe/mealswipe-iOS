@@ -15,7 +15,6 @@ class FirebaseObserver: ObservableObject {
     @Published var meals = [Meal]()
     @Published var swipes = [String: Any]()
     @Published var loadingMessage = ""
-    @Published var numCards = 0
     @Published var isLoading = false
    
     // Fetch the meals that have not been swiped on yet
