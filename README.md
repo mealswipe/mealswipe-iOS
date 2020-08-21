@@ -39,6 +39,7 @@ Date notes when all features in that section should be implemented. Features sho
 
 - Testflight Beta 1 (10/1/2020)
   1. [ ] PUSH NOTIFICATIONS USING CLOUD FUNCTIONS
+  2. [ ] FILTERS IMPLEMENTED
   
 - Testflight Beta 2 (10/15/2020)
   1. [ ] OPTIMIZATIONS AROUND SWIPING
