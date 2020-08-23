@@ -10,6 +10,7 @@
 		0A0661BDB742AB4417DDC7B2 /* Pods_Mealswipe_MealswipeUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0040D83BFC63E63C20D82081 /* Pods_Mealswipe_MealswipeUITests.framework */; };
 		4971ADCABDA2403E9E3296E9 /* Pods_Mealswipe.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DCE79BB83C4F79140F83A200 /* Pods_Mealswipe.framework */; };
 		62048F1024E9C1FA00D0EE43 /* MealCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62048F0F24E9C1FA00D0EE43 /* MealCardView.swift */; };
+		627D068424F2DC6B00EBCE9C /* MealswipeUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 627D068324F2DC6B00EBCE9C /* MealswipeUser.swift */; };
 		62864DFB24EB253E0071EC1C /* FirebaseObserver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62864DFA24EB253E0071EC1C /* FirebaseObserver.swift */; };
 		629B745524E726A30053AF49 /* MealswipeApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 629B745424E726A30053AF49 /* MealswipeApp.swift */; };
 		629B745724E726A30053AF49 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 629B745624E726A30053AF49 /* ContentView.swift */; };
@@ -48,6 +49,7 @@
 		0040D83BFC63E63C20D82081 /* Pods_Mealswipe_MealswipeUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Mealswipe_MealswipeUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		56F1A01F7DD72C148FE82529 /* Pods-Mealswipe-MealswipeUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Mealswipe-MealswipeUITests.debug.xcconfig"; path = "Target Support Files/Pods-Mealswipe-MealswipeUITests/Pods-Mealswipe-MealswipeUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		62048F0F24E9C1FA00D0EE43 /* MealCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealCardView.swift; sourceTree = "<group>"; };
+		627D068324F2DC6B00EBCE9C /* MealswipeUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealswipeUser.swift; sourceTree = "<group>"; };
 		6280C151F473ED2586F3ECBF /* Pods_MealswipeTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MealswipeTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		62864DFA24EB253E0071EC1C /* FirebaseObserver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseObserver.swift; sourceTree = "<group>"; };
 		629B745124E726A30053AF49 /* Mealswipe.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Mealswipe.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -167,6 +169,7 @@
 				62864DFA24EB253E0071EC1C /* FirebaseObserver.swift */,
 				62BF380C24F0671E0038320E /* OverlayView.swift */,
 				62BF380E24F068030038320E /* MealCardRecipeView.swift */,
+				627D068324F2DC6B00EBCE9C /* MealswipeUser.swift */,
 			);
 			path = Mealswipe;
 			sourceTree = "<group>";
@@ -437,6 +440,7 @@
 			files = (
 				62BF380D24F0671E0038320E /* OverlayView.swift in Sources */,
 				629B745724E726A30053AF49 /* ContentView.swift in Sources */,
+				627D068424F2DC6B00EBCE9C /* MealswipeUser.swift in Sources */,
 				62864DFB24EB253E0071EC1C /* FirebaseObserver.swift in Sources */,
 				62048F1024E9C1FA00D0EE43 /* MealCardView.swift in Sources */,
 				62E69C2924E9C48C00B1D76B /* Meal.swift in Sources */,

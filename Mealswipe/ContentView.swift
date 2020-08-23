@@ -21,8 +21,6 @@ struct ContentView: View {
         ]
         
         UINavigationBar.appearance().titleTextAttributes = textAttributes
-        
-        firebase.fetchSwipes()
     }
     
     var body: some View {
@@ -46,6 +44,9 @@ struct ContentView: View {
             }
 
             .navigationBarTitle(Text("MEALSWIPE"), displayMode: .inline)
+        }
+        .onAppear {
+            firebase.fetchUser()
         }
     }
 }

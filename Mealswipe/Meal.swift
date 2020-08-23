@@ -11,6 +11,9 @@ import UIKit
 import FirebaseFirestore
 
 class Meal: Identifiable {
+    
+
+    
     var id: String
     var name: String
     var minutes: Int

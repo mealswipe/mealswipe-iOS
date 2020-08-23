@@ -6,7 +6,7 @@
 //
 
 import SwiftUI
-import Firebase
+import FirebaseCore
 import FirebaseAuth
 
 @main
@@ -15,15 +15,18 @@ struct MealswipeApp: App {
     
     init() {
         FirebaseApp.configure()
+        authObserve.signin()
     }
     
     var body: some Scene {
         WindowGroup {
-            if authObserve.checkIfUserIsLoggedIn() {
-                ContentView()
-            } else {
-                LoginRegisterView()
-            }
+            
+            ContentView()
+//            if authObserve.checkIfUserIsLoggedIn() {
+//                ContentView()
+//            } else {
+//                LoginRegisterView()
+//            }
         }
     }
 }

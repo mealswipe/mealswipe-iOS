@@ -13,6 +13,7 @@ class AuthObserver: ObservableObject {
     
     func checkIfUserIsLoggedIn() -> Bool {
         if Auth.auth().currentUser?.uid != nil { return true }
+        signin()
         return false
     }
     
@@ -54,6 +55,12 @@ class AuthObserver: ObservableObject {
                 
                 print("User data successfully saved to firestore")
             }
+        }
+    }
+    
+    func signin() {
+        Auth.auth().signIn(withEmail: "brockcm98@gmail.com", password: "password") { (result, error) in
+            if let err = error {print(err); return;}
         }
     }
 }
