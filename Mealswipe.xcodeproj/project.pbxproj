@@ -12,6 +12,7 @@
 		62048F1024E9C1FA00D0EE43 /* MealCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62048F0F24E9C1FA00D0EE43 /* MealCardView.swift */; };
 		627D068424F2DC6B00EBCE9C /* MealswipeUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 627D068324F2DC6B00EBCE9C /* MealswipeUser.swift */; };
 		62864DFB24EB253E0071EC1C /* FirebaseObserver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62864DFA24EB253E0071EC1C /* FirebaseObserver.swift */; };
+		629351DC24F5B1AB003E437E /* MealswipeUserProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 629351DB24F5B1AB003E437E /* MealswipeUserProfileView.swift */; };
 		629B745524E726A30053AF49 /* MealswipeApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 629B745424E726A30053AF49 /* MealswipeApp.swift */; };
 		629B745724E726A30053AF49 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 629B745624E726A30053AF49 /* ContentView.swift */; };
 		629B745924E726A60053AF49 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 629B745824E726A60053AF49 /* Assets.xcassets */; };
@@ -52,6 +53,7 @@
 		627D068324F2DC6B00EBCE9C /* MealswipeUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealswipeUser.swift; sourceTree = "<group>"; };
 		6280C151F473ED2586F3ECBF /* Pods_MealswipeTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MealswipeTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		62864DFA24EB253E0071EC1C /* FirebaseObserver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseObserver.swift; sourceTree = "<group>"; };
+		629351DB24F5B1AB003E437E /* MealswipeUserProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealswipeUserProfileView.swift; sourceTree = "<group>"; };
 		629B745124E726A30053AF49 /* Mealswipe.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Mealswipe.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		629B745424E726A30053AF49 /* MealswipeApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealswipeApp.swift; sourceTree = "<group>"; };
 		629B745624E726A30053AF49 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -170,6 +172,7 @@
 				62BF380C24F0671E0038320E /* OverlayView.swift */,
 				62BF380E24F068030038320E /* MealCardRecipeView.swift */,
 				627D068324F2DC6B00EBCE9C /* MealswipeUser.swift */,
+				629351DB24F5B1AB003E437E /* MealswipeUserProfileView.swift */,
 			);
 			path = Mealswipe;
 			sourceTree = "<group>";
@@ -441,6 +444,7 @@
 				62BF380D24F0671E0038320E /* OverlayView.swift in Sources */,
 				629B745724E726A30053AF49 /* ContentView.swift in Sources */,
 				627D068424F2DC6B00EBCE9C /* MealswipeUser.swift in Sources */,
+				629351DC24F5B1AB003E437E /* MealswipeUserProfileView.swift in Sources */,
 				62864DFB24EB253E0071EC1C /* FirebaseObserver.swift in Sources */,
 				62048F1024E9C1FA00D0EE43 /* MealCardView.swift in Sources */,
 				62E69C2924E9C48C00B1D76B /* Meal.swift in Sources */,

@@ -6,14 +6,13 @@
 //
 
 import SwiftUI
+import SDWebImageSwiftUI
 
 struct ContentView: View {
     @ObservedObject var firebase = FirebaseObserver()
+    @State var showSettingsView = false
     
     init() {
-        UINavigationBar.appearance().setBackgroundImage(UIImage(), for: .default)
-        UINavigationBar.appearance().shadowImage = UIImage()
-        UINavigationBar.appearance().isTranslucent = true
         
         // Make title text have a thin font weight
         let textAttributes = [
@@ -21,6 +20,7 @@ struct ContentView: View {
         ]
         
         UINavigationBar.appearance().titleTextAttributes = textAttributes
+        firebase.fetchUserInfo()
     }
     
     var body: some View {
@@ -44,9 +44,34 @@ struct ContentView: View {
             }
 
             .navigationBarTitle(Text("MEALSWIPE"), displayMode: .inline)
+            .navigationBarItems(leading:
+                Button(action: {
+                    print("presenting view")
+                    showSettingsView.toggle()
+                }, label: {
+                    if let user = firebase.user {
+                        let url = URL(string: user.profileImageUrl)
+                        WebImage(url: url)
+                            .resizable()
+                            .frame(width: 40, height: 40, alignment: .center)
+                            .cornerRadius(20)
+                    }
+                }).offset(x: 0, y: -5)
+            )
         }
+        
         .onAppear {
-            firebase.fetchUser()
+            if showSettingsView == false {
+                firebase.fetchUserSwipes()
+            }
+        }
+        
+        .sheet(isPresented: $showSettingsView) {
+            MealswipeUserProfileView {
+                self.showSettingsView = false
+                firebase.meals.removeAll()
+                firebase.fetchUserSwipes()
+            }
         }
     }
 }

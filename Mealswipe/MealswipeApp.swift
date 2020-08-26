@@ -21,12 +21,14 @@ struct MealswipeApp: App {
     var body: some Scene {
         WindowGroup {
             
-            ContentView()
-//            if authObserve.checkIfUserIsLoggedIn() {
-//                ContentView()
-//            } else {
-//                LoginRegisterView()
-//            }
+//            MealswipeUserProfileView()
+            if authObserve.isUserLoggedIn {
+                ContentView()
+                    .environmentObject(authObserve)
+            } else {
+                LoginRegisterView()
+                    .environmentObject(authObserve)
+            }
         }
     }
 }

@@ -11,10 +11,11 @@ import FirebaseFirestore
 
 class AuthObserver: ObservableObject {
     
-    func checkIfUserIsLoggedIn() -> Bool {
-        if Auth.auth().currentUser?.uid != nil { return true }
+    @Published var isUserLoggedIn: Bool = false
+    
+    func checkIfUserIsLoggedIn() {
+        if Auth.auth().currentUser?.uid != nil { isUserLoggedIn = true }
         signin()
-        return false
     }
     
     func registerAccount() {
@@ -62,5 +63,6 @@ class AuthObserver: ObservableObject {
         Auth.auth().signIn(withEmail: "brockcm98@gmail.com", password: "password") { (result, error) in
             if let err = error {print(err); return;}
         }
+        isUserLoggedIn = true
     }
 }

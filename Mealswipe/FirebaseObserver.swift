@@ -10,6 +10,7 @@ import FirebaseFirestore
 import FirebaseAuth
 
 class FirebaseObserver: ObservableObject {
+    @Published var user: MealswipeUser?
     @Published var meals = [Meal]()
     @Published var swipes = [String: Any]()
     @Published var loadingMessage = ""
@@ -112,12 +113,10 @@ class FirebaseObserver: ObservableObject {
             } else {
                 Firestore.firestore().collection("swipes").document(uid).setData(dictionaryToInsert)
             }
-            
-
         }
     }
     
-    func fetchUser() {
+    func fetchUserSwipes() {
         guard let uid = Auth.auth().currentUser?.uid else {return}
         
         Firestore.firestore().collection("users").document(uid).getDocument { [self] (snapshot, error) in
@@ -131,5 +130,24 @@ class FirebaseObserver: ObservableObject {
                 self.fetchSwipes(user: user)
             }
         }
+    }
+    
+    func fetchUserInfo() {
+        self.isLoading = true
+        guard let uid = Auth.auth().currentUser?.uid else {return}
+
+        Firestore.firestore().collection("users").document(uid).getDocument { [self] (snapshot, error) in
+            if let err = error {
+                print(err.localizedDescription)
+                return
+            }
+
+            if let dictionary = snapshot?.data() {
+                let user = MealswipeUser(dictionary: dictionary)
+                self.user = user
+            }
+        }
+        
+        self.isLoading = false
     }
 }
