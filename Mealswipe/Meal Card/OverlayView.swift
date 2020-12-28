@@ -15,12 +15,11 @@ struct MealCardOverlayView: View {
     var body: some View {
         ZStack {
             
-            if (isExpanded || abs(self.offset.width) > 0) {
-                Rectangle()
-                    .foregroundColor(.black)
-                    .opacity(0.8)
-                    .cornerRadius(self.isExpanded ? 0 : 20)
-            }
+            Rectangle()
+                .foregroundColor(.black)
+                .opacity(offset.width > 0 || offset.width < 0 ? 0.8 : 0)
+                .cornerRadius(20)
+                
             
             if (!isExpanded && abs(self.offset.width) == 0) {
                 LinearGradient(gradient: .init(colors: [.clear, .black]), startPoint: .top, endPoint: .bottom)
@@ -33,12 +32,14 @@ struct MealCardOverlayView: View {
                 .foregroundColor(.red)
                 .fontWeight(.bold)
                 .opacity(offset.width < 0 ? 1 : 0)
+                .animation(.easeInOut)
             
             Text("YUM!")
                 .font(.title)
                 .foregroundColor(.green)
                 .fontWeight(.bold)
                 .opacity(offset.width > 0 ? 1 : 0)
+                .animation(.easeInOut)
         }
     }
 }

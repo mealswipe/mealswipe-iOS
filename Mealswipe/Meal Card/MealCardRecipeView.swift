@@ -13,7 +13,6 @@ struct MealCardRecipeView: View {
     var body: some View {
         ScrollView {
             HStack {
-                
                 VStack(alignment: .leading, spacing: 8, content: {
                     Text("Here's What You'll Need")
                         .foregroundColor(.white)
@@ -26,7 +25,8 @@ struct MealCardRecipeView: View {
                             .fontWeight(.thin)
                     }
                     
-                    Text("Here's How to Make It")
+                    let extractedExpr = Text("Here's How to Make It")
+                    extractedExpr
                         .foregroundColor(.white)
                         .fontWeight(.bold)
                         .font(/*@START_MENU_TOKEN@*/.title/*@END_MENU_TOKEN@*/)

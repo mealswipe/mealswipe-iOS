@@ -14,7 +14,10 @@ class AuthObserver: ObservableObject {
     @Published var isUserLoggedIn: Bool = false
     
     func checkIfUserIsLoggedIn() {
-        if Auth.auth().currentUser?.uid != nil { isUserLoggedIn = true }
+        if Auth.auth().currentUser?.uid != nil {
+            isUserLoggedIn = true
+            return
+        }
         signin()
     }
     

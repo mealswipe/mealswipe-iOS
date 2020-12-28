@@ -10,7 +10,7 @@ import SDWebImageSwiftUI
 import FirebaseFirestore
 
 struct MealswipeUserProfileView: View {
-    @ObservedObject var firebase = FirebaseObserver()
+    @ObservedObject var firebase = SwipeObserver()
     @State var isGlutenFree = false
     @State var isVegetarian = false
     @State var isVegan = false
@@ -54,8 +54,7 @@ struct MealswipeUserProfileView: View {
                             Section(header: Text("Mealswipe Premium Filters")) {
                                 Text("Price Range")
                                 Text("Cook Time")
-                                Text("High Protein")
-                                Text("Low Carb")
+                                Text("Whole Food")
                                 Text("Meal Type")
                             }
                         }
@@ -87,6 +86,7 @@ struct MealswipeUserProfileView: View {
                         self.onDismiss()
                     }, label: {
                         Text("Save")
+                            .foregroundColor(Color("NavBarAccent"))
                     })
                 )
             }

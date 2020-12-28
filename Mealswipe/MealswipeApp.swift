@@ -20,8 +20,6 @@ struct MealswipeApp: App {
     
     var body: some Scene {
         WindowGroup {
-            
-//            MealswipeUserProfileView()
             if authObserve.isUserLoggedIn {
                 ContentView()
                     .environmentObject(authObserve)
@@ -32,3 +30,4 @@ struct MealswipeApp: App {
         }
     }
 }
+

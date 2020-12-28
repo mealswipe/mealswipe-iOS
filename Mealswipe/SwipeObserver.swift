@@ -9,14 +9,13 @@ import Foundation
 import FirebaseFirestore
 import FirebaseAuth
 
-class FirebaseObserver: ObservableObject {
+class SwipeObserver: ObservableObject {
     @Published var user: MealswipeUser?
     @Published var meals = [Meal]()
     @Published var swipes = [String: Any]()
     @Published var loadingMessage = ""
     @Published var isLoading = false
     @Published var swipesRemaining = 0
-    
     
     // Fetch the meals that have not been swiped on yet
     func fetchMeals(user: MealswipeUser) {
@@ -50,7 +49,6 @@ class FirebaseObserver: ObservableObject {
             })
             
             self.swipesRemaining = self.meals.count
-            self.isLoading = false
             self.showMessageWithTimer()
         }
     }
@@ -67,6 +65,8 @@ class FirebaseObserver: ObservableObject {
                     self.loadingMessage = "Out of meals\nCheck your food basket"
                 }
             }
+            
+            self.isLoading = false
         }
     }
     

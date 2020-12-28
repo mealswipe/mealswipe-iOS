@@ -3,15 +3,16 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 51;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0A0661BDB742AB4417DDC7B2 /* Pods_Mealswipe_MealswipeUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0040D83BFC63E63C20D82081 /* Pods_Mealswipe_MealswipeUITests.framework */; };
-		4971ADCABDA2403E9E3296E9 /* Pods_Mealswipe.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DCE79BB83C4F79140F83A200 /* Pods_Mealswipe.framework */; };
 		62048F1024E9C1FA00D0EE43 /* MealCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62048F0F24E9C1FA00D0EE43 /* MealCardView.swift */; };
 		627D068424F2DC6B00EBCE9C /* MealswipeUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 627D068324F2DC6B00EBCE9C /* MealswipeUser.swift */; };
-		62864DFB24EB253E0071EC1C /* FirebaseObserver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62864DFA24EB253E0071EC1C /* FirebaseObserver.swift */; };
+		62864DFB24EB253E0071EC1C /* SwipeObserver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62864DFA24EB253E0071EC1C /* SwipeObserver.swift */; };
+		628F31F124F9F60600611E82 /* FoodBasketView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 628F31F024F9F60600611E82 /* FoodBasketView.swift */; };
+		628F31F324F9F64800611E82 /* ShoppingListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 628F31F224F9F64800611E82 /* ShoppingListView.swift */; };
+		628F31F724FACBBD00611E82 /* FoodBasketObserver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 628F31F624FACBBD00611E82 /* FoodBasketObserver.swift */; };
 		629351DC24F5B1AB003E437E /* MealswipeUserProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 629351DB24F5B1AB003E437E /* MealswipeUserProfileView.swift */; };
 		629B745524E726A30053AF49 /* MealswipeApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 629B745424E726A30053AF49 /* MealswipeApp.swift */; };
 		629B745724E726A30053AF49 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 629B745624E726A30053AF49 /* ContentView.swift */; };
@@ -22,11 +23,17 @@
 		629B748024E7272F0053AF49 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 629B747F24E7272F0053AF49 /* GoogleService-Info.plist */; };
 		62BF380D24F0671E0038320E /* OverlayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62BF380C24F0671E0038320E /* OverlayView.swift */; };
 		62BF380F24F068030038320E /* MealCardRecipeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62BF380E24F068030038320E /* MealCardRecipeView.swift */; };
+		62D18AF325041E1100EE205A /* SDWebImageSwiftUI in Frameworks */ = {isa = PBXBuildFile; productRef = 62D18AF225041E1100EE205A /* SDWebImageSwiftUI */; };
+		62D18AF625041FDC00EE205A /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = 62D18AF525041FDC00EE205A /* FirebaseFirestore */; };
+		62D18AF825041FDC00EE205A /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = 62D18AF725041FDC00EE205A /* FirebaseStorage */; };
+		62D18AFA25041FDC00EE205A /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 62D18AF925041FDC00EE205A /* FirebaseAuth */; };
+		62D18AFC25041FDC00EE205A /* FirebaseCore in Frameworks */ = {isa = PBXBuildFile; productRef = 62D18AFB25041FDC00EE205A /* FirebaseCore */; };
+		62D18AFE25041FDC00EE205A /* Firebase in Frameworks */ = {isa = PBXBuildFile; productRef = 62D18AFD25041FDC00EE205A /* Firebase */; };
 		62DEEE9024E7286A00B7598C /* LoginRegisterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62DEEE8F24E7286A00B7598C /* LoginRegisterView.swift */; };
 		62DEEE9224E7289A00B7598C /* AuthObserver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62DEEE9124E7289A00B7598C /* AuthObserver.swift */; };
 		62E69C2924E9C48C00B1D76B /* Meal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62E69C2724E9C48B00B1D76B /* Meal.swift */; };
 		62E69C2A24E9C48C00B1D76B /* Ingredient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62E69C2824E9C48C00B1D76B /* Ingredient.swift */; };
-		8B6BDE2EA087097066700B87 /* Pods_MealswipeTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6280C151F473ED2586F3ECBF /* Pods_MealswipeTests.framework */; };
+		62F9D52624F9965200ACAFE6 /* MealCardRecipeTagsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62F9D52524F9965200ACAFE6 /* MealCardRecipeTagsView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,12 +54,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		0040D83BFC63E63C20D82081 /* Pods_Mealswipe_MealswipeUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Mealswipe_MealswipeUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		56F1A01F7DD72C148FE82529 /* Pods-Mealswipe-MealswipeUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Mealswipe-MealswipeUITests.debug.xcconfig"; path = "Target Support Files/Pods-Mealswipe-MealswipeUITests/Pods-Mealswipe-MealswipeUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		62048F0F24E9C1FA00D0EE43 /* MealCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealCardView.swift; sourceTree = "<group>"; };
 		627D068324F2DC6B00EBCE9C /* MealswipeUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealswipeUser.swift; sourceTree = "<group>"; };
-		6280C151F473ED2586F3ECBF /* Pods_MealswipeTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MealswipeTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		62864DFA24EB253E0071EC1C /* FirebaseObserver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseObserver.swift; sourceTree = "<group>"; };
+		62864DFA24EB253E0071EC1C /* SwipeObserver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwipeObserver.swift; sourceTree = "<group>"; };
+		628F31F024F9F60600611E82 /* FoodBasketView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodBasketView.swift; sourceTree = "<group>"; };
+		628F31F224F9F64800611E82 /* ShoppingListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoppingListView.swift; sourceTree = "<group>"; };
+		628F31F624FACBBD00611E82 /* FoodBasketObserver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodBasketObserver.swift; sourceTree = "<group>"; };
 		629351DB24F5B1AB003E437E /* MealswipeUserProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealswipeUserProfileView.swift; sourceTree = "<group>"; };
 		629B745124E726A30053AF49 /* Mealswipe.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Mealswipe.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		629B745424E726A30053AF49 /* MealswipeApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealswipeApp.swift; sourceTree = "<group>"; };
@@ -73,12 +80,7 @@
 		62DEEE9124E7289A00B7598C /* AuthObserver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthObserver.swift; sourceTree = "<group>"; };
 		62E69C2724E9C48B00B1D76B /* Meal.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Meal.swift; sourceTree = "<group>"; };
 		62E69C2824E9C48C00B1D76B /* Ingredient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Ingredient.swift; sourceTree = "<group>"; };
-		7E94EB6753A5E479A80C1DA9 /* Pods-Mealswipe-MealswipeUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Mealswipe-MealswipeUITests.release.xcconfig"; path = "Target Support Files/Pods-Mealswipe-MealswipeUITests/Pods-Mealswipe-MealswipeUITests.release.xcconfig"; sourceTree = "<group>"; };
-		B76E47EBDA20054C1EC29603 /* Pods-Mealswipe.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Mealswipe.debug.xcconfig"; path = "Target Support Files/Pods-Mealswipe/Pods-Mealswipe.debug.xcconfig"; sourceTree = "<group>"; };
-		D3EF39AD9F4C300978CAD8F2 /* Pods-MealswipeTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MealswipeTests.release.xcconfig"; path = "Target Support Files/Pods-MealswipeTests/Pods-MealswipeTests.release.xcconfig"; sourceTree = "<group>"; };
-		DCE79BB83C4F79140F83A200 /* Pods_Mealswipe.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Mealswipe.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		FA6EC119B22AF760106586B0 /* Pods-Mealswipe.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Mealswipe.release.xcconfig"; path = "Target Support Files/Pods-Mealswipe/Pods-Mealswipe.release.xcconfig"; sourceTree = "<group>"; };
-		FECD9A6D4E387524DA73C653 /* Pods-MealswipeTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MealswipeTests.debug.xcconfig"; path = "Target Support Files/Pods-MealswipeTests/Pods-MealswipeTests.debug.xcconfig"; sourceTree = "<group>"; };
+		62F9D52524F9965200ACAFE6 /* MealCardRecipeTagsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealCardRecipeTagsView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,7 +88,12 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4971ADCABDA2403E9E3296E9 /* Pods_Mealswipe.framework in Frameworks */,
+				62D18AF325041E1100EE205A /* SDWebImageSwiftUI in Frameworks */,
+				62D18AFC25041FDC00EE205A /* FirebaseCore in Frameworks */,
+				62D18AF625041FDC00EE205A /* FirebaseFirestore in Frameworks */,
+				62D18AF825041FDC00EE205A /* FirebaseStorage in Frameworks */,
+				62D18AFA25041FDC00EE205A /* FirebaseAuth in Frameworks */,
+				62D18AFE25041FDC00EE205A /* Firebase in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -94,7 +101,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8B6BDE2EA087097066700B87 /* Pods_MealswipeTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -102,34 +108,21 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0A0661BDB742AB4417DDC7B2 /* Pods_Mealswipe_MealswipeUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		1DED09196A6E1BDA4A77D8D0 /* Frameworks */ = {
+		628F31F424F9F67300611E82 /* Meal Card */ = {
 			isa = PBXGroup;
 			children = (
-				DCE79BB83C4F79140F83A200 /* Pods_Mealswipe.framework */,
-				0040D83BFC63E63C20D82081 /* Pods_Mealswipe_MealswipeUITests.framework */,
-				6280C151F473ED2586F3ECBF /* Pods_MealswipeTests.framework */,
+				62BF380E24F068030038320E /* MealCardRecipeView.swift */,
+				62048F0F24E9C1FA00D0EE43 /* MealCardView.swift */,
+				62BF380C24F0671E0038320E /* OverlayView.swift */,
+				62F9D52524F9965200ACAFE6 /* MealCardRecipeTagsView.swift */,
 			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		41106C7DE0D5779AF0CE274D /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				B76E47EBDA20054C1EC29603 /* Pods-Mealswipe.debug.xcconfig */,
-				FA6EC119B22AF760106586B0 /* Pods-Mealswipe.release.xcconfig */,
-				56F1A01F7DD72C148FE82529 /* Pods-Mealswipe-MealswipeUITests.debug.xcconfig */,
-				7E94EB6753A5E479A80C1DA9 /* Pods-Mealswipe-MealswipeUITests.release.xcconfig */,
-				FECD9A6D4E387524DA73C653 /* Pods-MealswipeTests.debug.xcconfig */,
-				D3EF39AD9F4C300978CAD8F2 /* Pods-MealswipeTests.release.xcconfig */,
-			);
-			path = Pods;
+			path = "Meal Card";
 			sourceTree = "<group>";
 		};
 		629B744824E726A30053AF49 = {
@@ -139,8 +132,6 @@
 				629B746524E726A60053AF49 /* MealswipeTests */,
 				629B747024E726A60053AF49 /* MealswipeUITests */,
 				629B745224E726A30053AF49 /* Products */,
-				41106C7DE0D5779AF0CE274D /* Pods */,
-				1DED09196A6E1BDA4A77D8D0 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -158,7 +149,9 @@
 			isa = PBXGroup;
 			children = (
 				62E69C2824E9C48C00B1D76B /* Ingredient.swift */,
+				627D068324F2DC6B00EBCE9C /* MealswipeUser.swift */,
 				62E69C2724E9C48B00B1D76B /* Meal.swift */,
+				628F31F424F9F67300611E82 /* Meal Card */,
 				629B747F24E7272F0053AF49 /* GoogleService-Info.plist */,
 				629B745424E726A30053AF49 /* MealswipeApp.swift */,
 				629B745624E726A30053AF49 /* ContentView.swift */,
@@ -167,12 +160,11 @@
 				629B745A24E726A60053AF49 /* Preview Content */,
 				62DEEE8F24E7286A00B7598C /* LoginRegisterView.swift */,
 				62DEEE9124E7289A00B7598C /* AuthObserver.swift */,
-				62048F0F24E9C1FA00D0EE43 /* MealCardView.swift */,
-				62864DFA24EB253E0071EC1C /* FirebaseObserver.swift */,
-				62BF380C24F0671E0038320E /* OverlayView.swift */,
-				62BF380E24F068030038320E /* MealCardRecipeView.swift */,
-				627D068324F2DC6B00EBCE9C /* MealswipeUser.swift */,
+				62864DFA24EB253E0071EC1C /* SwipeObserver.swift */,
 				629351DB24F5B1AB003E437E /* MealswipeUserProfileView.swift */,
+				628F31F024F9F60600611E82 /* FoodBasketView.swift */,
+				628F31F224F9F64800611E82 /* ShoppingListView.swift */,
+				628F31F624FACBBD00611E82 /* FoodBasketObserver.swift */,
 			);
 			path = Mealswipe;
 			sourceTree = "<group>";
@@ -210,17 +202,23 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 629B747624E726A60053AF49 /* Build configuration list for PBXNativeTarget "Mealswipe" */;
 			buildPhases = (
-				3E9E3884E94388E536F65E4B /* [CP] Check Pods Manifest.lock */,
 				629B744D24E726A30053AF49 /* Sources */,
 				629B744E24E726A30053AF49 /* Frameworks */,
 				629B744F24E726A30053AF49 /* Resources */,
-				280FF18ADCC55C5E76D64E61 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
 			name = Mealswipe;
+			packageProductDependencies = (
+				62D18AF225041E1100EE205A /* SDWebImageSwiftUI */,
+				62D18AF525041FDC00EE205A /* FirebaseFirestore */,
+				62D18AF725041FDC00EE205A /* FirebaseStorage */,
+				62D18AF925041FDC00EE205A /* FirebaseAuth */,
+				62D18AFB25041FDC00EE205A /* FirebaseCore */,
+				62D18AFD25041FDC00EE205A /* Firebase */,
+			);
 			productName = Mealswipe;
 			productReference = 629B745124E726A30053AF49 /* Mealswipe.app */;
 			productType = "com.apple.product-type.application";
@@ -229,7 +227,6 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 629B747924E726A60053AF49 /* Build configuration list for PBXNativeTarget "MealswipeTests" */;
 			buildPhases = (
-				03AE52AAACFC0822DABD8B5F /* [CP] Check Pods Manifest.lock */,
 				629B745E24E726A60053AF49 /* Sources */,
 				629B745F24E726A60053AF49 /* Frameworks */,
 				629B746024E726A60053AF49 /* Resources */,
@@ -248,11 +245,9 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 629B747C24E726A60053AF49 /* Build configuration list for PBXNativeTarget "MealswipeUITests" */;
 			buildPhases = (
-				5841CC8C2AE01C4CADD1BDC7 /* [CP] Check Pods Manifest.lock */,
 				629B746924E726A60053AF49 /* Sources */,
 				629B746A24E726A60053AF49 /* Frameworks */,
 				629B746B24E726A60053AF49 /* Resources */,
-				F0214F06DF054DA8BF3919BE /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -295,6 +290,10 @@
 				Base,
 			);
 			mainGroup = 629B744824E726A30053AF49;
+			packageReferences = (
+				62D18AF125041E1100EE205A /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */,
+				62D18AF425041FDC00EE205A /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+			);
 			productRefGroup = 629B745224E726A30053AF49 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -333,109 +332,6 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
-/* Begin PBXShellScriptBuildPhase section */
-		03AE52AAACFC0822DABD8B5F /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-MealswipeTests-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		280FF18ADCC55C5E76D64E61 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Mealswipe/Pods-Mealswipe-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Mealswipe/Pods-Mealswipe-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Mealswipe/Pods-Mealswipe-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		3E9E3884E94388E536F65E4B /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-Mealswipe-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		5841CC8C2AE01C4CADD1BDC7 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-Mealswipe-MealswipeUITests-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		F0214F06DF054DA8BF3919BE /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Mealswipe-MealswipeUITests/Pods-Mealswipe-MealswipeUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Mealswipe-MealswipeUITests/Pods-Mealswipe-MealswipeUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Mealswipe-MealswipeUITests/Pods-Mealswipe-MealswipeUITests-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-/* End PBXShellScriptBuildPhase section */
-
 /* Begin PBXSourcesBuildPhase section */
 		629B744D24E726A30053AF49 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -445,12 +341,16 @@
 				629B745724E726A30053AF49 /* ContentView.swift in Sources */,
 				627D068424F2DC6B00EBCE9C /* MealswipeUser.swift in Sources */,
 				629351DC24F5B1AB003E437E /* MealswipeUserProfileView.swift in Sources */,
-				62864DFB24EB253E0071EC1C /* FirebaseObserver.swift in Sources */,
+				62864DFB24EB253E0071EC1C /* SwipeObserver.swift in Sources */,
 				62048F1024E9C1FA00D0EE43 /* MealCardView.swift in Sources */,
 				62E69C2924E9C48C00B1D76B /* Meal.swift in Sources */,
 				62DEEE9024E7286A00B7598C /* LoginRegisterView.swift in Sources */,
+				628F31F124F9F60600611E82 /* FoodBasketView.swift in Sources */,
+				628F31F324F9F64800611E82 /* ShoppingListView.swift in Sources */,
 				62E69C2A24E9C48C00B1D76B /* Ingredient.swift in Sources */,
+				62F9D52624F9965200ACAFE6 /* MealCardRecipeTagsView.swift in Sources */,
 				629B745524E726A30053AF49 /* MealswipeApp.swift in Sources */,
+				628F31F724FACBBD00611E82 /* FoodBasketObserver.swift in Sources */,
 				62DEEE9224E7289A00B7598C /* AuthObserver.swift in Sources */,
 				62BF380F24F068030038320E /* MealCardRecipeView.swift in Sources */,
 			);
@@ -606,7 +506,6 @@
 		};
 		629B747724E726A60053AF49 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = B76E47EBDA20054C1EC29603 /* Pods-Mealswipe.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -629,7 +528,6 @@
 		};
 		629B747824E726A60053AF49 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = FA6EC119B22AF760106586B0 /* Pods-Mealswipe.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -652,7 +550,6 @@
 		};
 		629B747A24E726A60053AF49 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = FECD9A6D4E387524DA73C653 /* Pods-MealswipeTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -675,7 +572,6 @@
 		};
 		629B747B24E726A60053AF49 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = D3EF39AD9F4C300978CAD8F2 /* Pods-MealswipeTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -698,7 +594,6 @@
 		};
 		629B747D24E726A60053AF49 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 56F1A01F7DD72C148FE82529 /* Pods-Mealswipe-MealswipeUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -719,7 +614,6 @@
 		};
 		629B747E24E726A60053AF49 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 7E94EB6753A5E479A80C1DA9 /* Pods-Mealswipe-MealswipeUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -778,6 +672,58 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		62D18AF125041E1100EE205A /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SDWebImage/SDWebImageSwiftUI.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.5.0;
+			};
+		};
+		62D18AF425041FDC00EE205A /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk.git";
+			requirement = {
+				branch = "6.31-spm-beta";
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		62D18AF225041E1100EE205A /* SDWebImageSwiftUI */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 62D18AF125041E1100EE205A /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */;
+			productName = SDWebImageSwiftUI;
+		};
+		62D18AF525041FDC00EE205A /* FirebaseFirestore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 62D18AF425041FDC00EE205A /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseFirestore;
+		};
+		62D18AF725041FDC00EE205A /* FirebaseStorage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 62D18AF425041FDC00EE205A /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseStorage;
+		};
+		62D18AF925041FDC00EE205A /* FirebaseAuth */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 62D18AF425041FDC00EE205A /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAuth;
+		};
+		62D18AFB25041FDC00EE205A /* FirebaseCore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 62D18AF425041FDC00EE205A /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseCore;
+		};
+		62D18AFD25041FDC00EE205A /* Firebase */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 62D18AF425041FDC00EE205A /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = Firebase;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 629B744924E726A30053AF49 /* Project object */;
 }

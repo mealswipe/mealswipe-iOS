@@ -9,8 +9,11 @@ import SwiftUI
 import SDWebImageSwiftUI
 
 struct ContentView: View {
-    @ObservedObject var firebase = FirebaseObserver()
+    @ObservedObject var firebase = SwipeObserver()
     @State var showSettingsView = false
+    @State var isExpanded = false
+    @Namespace var namespace
+    @State var selectedMeal: Meal = Meal()
     
     init() {
         
@@ -20,51 +23,49 @@ struct ContentView: View {
         ]
         
         UINavigationBar.appearance().titleTextAttributes = textAttributes
+        
         firebase.fetchUserInfo()
+        firebase.fetchUserSwipes()
     }
     
     var body: some View {
+        
         NavigationView {
             
             VStack {
-                ZStack {
-                    
-                    if firebase.isLoading {
-                        Loader()
-                    } else {
-                        Text(firebase.loadingMessage)
-                            .fontWeight(.thin)
-                            .font(.title)
-                    }
-                    
-                    ForEach(self.firebase.meals) { (meal) -> MealCardView in
-                        MealCardView(meal: meal)
-                    }
+                
+                GeometryReader { reader in
+                    ZStack {
+                        if firebase.isLoading {
+                            Loader()
+                        } else {
+                            Text(firebase.loadingMessage)
+                                .fontWeight(.thin)
+                                .font(.title)
+                        }
+                        
+                        ForEach(self.firebase.meals) { (meal) -> MealCardView in
+                            MealCardView(meal: meal, isExpanded: $isExpanded, namespace: namespace, mealId: meal.id, selected: $selectedMeal)
+                        }
+                        
+                        if isExpanded {
+                            DetailsView(isExpanded: $isExpanded, meal: $selectedMeal, namespace: namespace)
+                                .edgesIgnoringSafeArea(.vertical)
+                        }
+                    }.position(x: reader.size.width / 2, y: reader.size.height / 2)
                 }
-            }
-
+                
+            }.edgesIgnoringSafeArea(.bottom)
+            
             .navigationBarTitle(Text("MEALSWIPE"), displayMode: .inline)
-            .navigationBarItems(leading:
-                Button(action: {
-                    print("presenting view")
-                    showSettingsView.toggle()
-                }, label: {
-                    if let user = firebase.user {
-                        let url = URL(string: user.profileImageUrl)
-                        WebImage(url: url)
-                            .resizable()
-                            .frame(width: 40, height: 40, alignment: .center)
-                            .cornerRadius(20)
-                    }
-                }).offset(x: 0, y: -5)
-            )
-        }
-        
-        .onAppear {
-            if showSettingsView == false {
-                firebase.fetchUserSwipes()
-            }
-        }
+            .navigationBarItems(leading: UserButton(showSettingsView: $showSettingsView), trailing: NavigationLink(destination: FoodBasketView(), label: {
+                Text("Basket")
+                    .foregroundColor(Color("NavBarAccent"))
+            }))
+            
+            .navigationBarHidden(isExpanded ? true : false)
+            
+        }.accentColor(Color("NavBarAccent"))
         
         .sheet(isPresented: $showSettingsView) {
             MealswipeUserProfileView {
@@ -92,4 +93,18 @@ struct Loader : UIViewRepresentable {
     }
     
     func updateUIView(_ uiView: UIActivityIndicatorView, context: UIViewRepresentableContext<Loader>) {}
+}
+
+struct UserButton: View {
+    @Binding var showSettingsView: Bool
+    
+    var body: some View {
+        Button {
+            showSettingsView.toggle()
+        } label: {
+            Text("Account")
+                .foregroundColor(Color("NavBarAccent"))
+        }
+        
+    }
 }
