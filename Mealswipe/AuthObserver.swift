@@ -18,7 +18,8 @@ class AuthObserver: ObservableObject {
             isUserLoggedIn = true
             return
         }
-        signin()
+        signin() // If you have created a account, signed in.
+        // registerAccount() If you have not created an account yet
     }
     
     func registerAccount() {
@@ -63,7 +64,7 @@ class AuthObserver: ObservableObject {
     }
     
     func signin() {
-        Auth.auth().signIn(withEmail: "brockcm98@gmail.com", password: "password") { (result, error) in
+        Auth.auth().signIn(withEmail: "YOUR EMAIL HERE", password: "YOUR PASSWORD HERE") { (result, error) in
             if let err = error {print(err); return;}
         }
         isUserLoggedIn = true
